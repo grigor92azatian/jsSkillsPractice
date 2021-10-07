@@ -1,0 +1,36 @@
+/* .imageCarouselContainer{
+
+} */
+
+.imageCarousel{
+    position: relative;
+}
+
+.imageFrame, .imageSlideContainer{
+    position: absolute;
+}
+
+.imageSlideContainer{
+    border: 1px solid black;
+    width: 1000px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    margin-right: 200px;
+}
+
+.imageSlide{
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    font-size: 50px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.imageFrame{
+    border: 10px solid black;
+    width: 200px;
+    height: 200px;
+}
+

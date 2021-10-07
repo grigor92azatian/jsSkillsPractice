@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Practice</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="drop-down-menu-styles.css">
+    <link rel="stylesheet" href="image-carousel-styles.css">
+    <link rel="stylesheet" href="form-validation-styles.css">
+</head>
+<body>
+    <h1>Practice</h1>
+    <div class="sectionContainer menuContainer">
+        <h2 class="menuButton">Menu</h2>
+        <div class="menuItemContainer">
+            <div>About Us</div>
+            <div>Contact Us</div>
+            <div>Order Now</div>
+            <div>Media</div>
+        </div>
+    </div>
+    <div class="sectionContainer imageCarouselContainer">
+        <h2>Image Carousel</h2>
+        <div class="imageCarousel">
+            <div class="imageSlideContainer">
+                <div class="imageSlide image1">1</div>
+                <div class="imageSlide image2">2</div>
+                <div class="imageSlide image3">3</div>
+                <div class="imageSlide image4">4</div>
+                <div class="imageSlide image5">5</div>
+            </div>
+            <div class="imageFrame"></div>
+        </div>
+    </div>
+    <div class="sectionContainer formValidationContainer">
+        <h2>Form Validation</h2>
+        <form>
+            <label for="choose">Which fruit would you like? (required)</label>
+            <input id="choose" type="text" name="i_like" autocomplete="off" required pattern="[Bb]anana|[Cc]herry|[Aa]pple|[Oo]range">
+            <label for="number">How many would you like?</label>
+            <input id="number" name="amount" type="number" required min="1" max="10">
+            <button type="button">Submit</button>
+        </form>
+    </div>
+    <script src="drop-down-menu-script.js"></script>
+</body>
+</html>
