@@ -11,12 +11,12 @@
 }
 
 .imageSlideContainer{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 1000px;
     height: 200px;
     display: flex;
     flex-direction: row;
-    margin-right: 200px;
+    margin-left: 200px;
 }
 
 .imageSlide{
@@ -29,8 +29,11 @@
 }
 
 .imageFrame{
-    border: 10px solid black;
-    width: 200px;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+    border-left: 200px solid black;
+    border-right: 200px solid black;
+    width: 600px;
     height: 200px;
 }
 
