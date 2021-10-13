@@ -30,14 +30,16 @@ body{
     align-items: center;
 }
 .button{
-    border: 1px solid black;
+    border: 1px solid white;
     width: 50px;
     height: 50px;
 
-    background-color: lightseagreen;
+    background-color: black;
     text-align: center;
     border-radius: 100%;
     font-size: 40px;
+    color: white;
+    font-weight: bold;
 }
 
 .imageSlideContainer{
@@ -45,11 +47,10 @@ body{
     height: 95%;
     width: 100%;
 
-    background-color: lightblue;
 }
 
 .imageSlide{
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 100%;
 
     text-align: center;
@@ -63,7 +64,6 @@ body{
     height: 5%;
     width: 100%;
 
-    background-color: pink;
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -83,6 +83,10 @@ body{
 
 
 /*----------------------------------change display to block to reveal image--------------------------*/
-.image3{
+.visibleImage{
     display: block;
+}
+
+.blackDot{
+    background-color: black;
 }
