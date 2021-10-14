@@ -19,39 +19,36 @@ function findCurrentIndex(){
     }
 }
 
+function addToImageAndDot(index){
+    imagesArr[index].classList.add("visibleImage");
+    dotsArr[index].classList.add("blackDot");
+}
+
+function removeFromImageAndDot(index){
+    imagesArr[index].classList.remove("visibleImage");
+    dotsArr[index].classList.remove("blackDot");
+}
+
 nextButton.addEventListener("click", function(){
-    //show the next picture
+    //show the next picture and change the next grey dot to black
+    removeFromImageAndDot(currentlyDisplayed);
     if(currentlyDisplayed === imagesArr.length-1){
-        imagesArr[currentlyDisplayed].classList.remove("visibleImage");
-            dotsArr[currentlyDisplayed].classList.remove("blackDot");
         currentlyDisplayed = 0;
-        imagesArr[currentlyDisplayed].classList.add("visibleImage");
-            dotsArr[currentlyDisplayed].classList.add("blackDot");
+        addToImageAndDot(currentlyDisplayed);
     }else{
-        imagesArr[currentlyDisplayed].classList.remove("visibleImage");
-            dotsArr[currentlyDisplayed].classList.remove("blackDot");
-        imagesArr[currentlyDisplayed+1].classList.add("visibleImage");
-            dotsArr[currentlyDisplayed+1].classList.add("blackDot");
+        addToImageAndDot(currentlyDisplayed+1);
         currentlyDisplayed = findCurrentIndex();
     }
-    //change the corresponding dot to black
-    
 });
 
 previousButton.addEventListener("click", function(){
-    //show the previous picture
+    //show the previous picture and change the previous dot to black
+    removeFromImageAndDot(currentlyDisplayed);
     if(currentlyDisplayed === 0){
-        imagesArr[currentlyDisplayed].classList.remove("visibleImage");
-            dotsArr[currentlyDisplayed].classList.remove("blackDot");
         currentlyDisplayed = imagesArr.length-1;
-        imagesArr[currentlyDisplayed].classList.add("visibleImage");
-            dotsArr[currentlyDisplayed].classList.add("blackDot");
+        addToImageAndDot(currentlyDisplayed);
     }else{
-        imagesArr[currentlyDisplayed].classList.remove("visibleImage");
-            dotsArr[currentlyDisplayed].classList.remove("blackDot");
-        imagesArr[currentlyDisplayed-1].classList.add("visibleImage");
-            dotsArr[currentlyDisplayed-1].classList.add("blackDot");
+        addToImageAndDot(currentlyDisplayed-1);
         currentlyDisplayed = findCurrentIndex();
     }
-    //change the corresponding dot to black
 });
