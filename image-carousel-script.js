@@ -5,11 +5,12 @@
 //clicking this button will reveal the next image in the array of images. If the last image is the one already shown, the next image will be the first
 
 let imagesArr = document.querySelectorAll(".imageSlide");   //an array of all the img divs
+let dotsArr = document.querySelectorAll(".dot");            //array of all the corresponding dot links
 let nextButton = document.querySelector(".next");           //next button on page
 let previousButton = document.querySelector(".previous");    //previous button on page
-let currentlyDisplayed = findVisibleImage();
+let currentlyDisplayed = findCurrentIndex();
 
-function findVisibleImage(){
+function findCurrentIndex(){
     //retun index of image that is currently being displayed
     for(let i=0;i<imagesArr.length;i++){
         if(imagesArr[i].classList[1]==="visibleImage"){
@@ -20,8 +21,7 @@ function findVisibleImage(){
 
 
 nextButton.addEventListener("click", function(){
-    //everything needed to show the next picture
-    console.log(currentlyDisplayed);
+    //show the next picture
     if(currentlyDisplayed === imagesArr.length-1){
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
         currentlyDisplayed = 0;
@@ -29,21 +29,22 @@ nextButton.addEventListener("click", function(){
     }else{
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
         imagesArr[currentlyDisplayed+1].classList.add("visibleImage");
-        currentlyDisplayed = findVisibleImage();        
+        currentlyDisplayed = findCurrentIndex();
     }
+    //change the corresponding dot to black
     
 });
 
 previousButton.addEventListener("click", function(){
     //show the previous picture
-    console.log(currentlyDisplayed);
     if(currentlyDisplayed === 0){
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
         currentlyDisplayed = imagesArr.length-1;
         imagesArr[currentlyDisplayed].classList.add("visibleImage");
     }else{
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
-        imagesArr[currentlyDisplayed-1].classList.add("visibleImage");        
-        currentlyDisplayed = findVisibleImage();
+        imagesArr[currentlyDisplayed-1].classList.add("visibleImage");
+        currentlyDisplayed = findCurrentIndex();
     }
+    //change the corresponding dot to black
 });
