@@ -18,15 +18,6 @@ function findVisibleImage(){
     }
 }
 
-function removeVisibility(imageSlide){
-    imageSlide.classList.remove("visibleImage");
-    return imageSlide;
-}
-
-function addVisibility(imageSlide){
-    imageSlide.classList.add("visibleImage");
-}
-
 
 nextButton.addEventListener("click", function(){
     //everything needed to show the next picture
