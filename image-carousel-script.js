@@ -6,7 +6,8 @@
 
 let imagesArr = document.querySelectorAll(".imageSlide");   //an array of all the img divs
 let nextButton = document.querySelector(".next");           //next button on page
-let previousButton = document.querySelector("previous");    //previous button on page
+let previousButton = document.querySelector(".previous");    //previous button on page
+
 
 function findVisibleImage(){
     //retun index of image that is currently being displayed
@@ -37,5 +38,18 @@ nextButton.addEventListener("click", function(){
     }else{
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
         imagesArr[currentlyDisplayed+1].classList.add("visibleImage");        
+    }
+});
+
+previousButton.addEventListener("click", function(){
+    //show the previous picture
+    let currentlyDisplayed = findVisibleImage();
+    if(currentlyDisplayed === 0){
+        imagesArr[currentlyDisplayed].classList.remove("visibleImage");
+        currentlyDisplayed = imagesArr.length-1;
+        imagesArr[currentlyDisplayed-1].classList.add("visibleImage");
+    }else{
+        imagesArr[currentlyDisplayed].classList.remove("visibleImage");
+        imagesArr[currentlyDisplayed-1].classList.add("visibleImage");        
     }
 });
