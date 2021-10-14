@@ -75,8 +75,8 @@ body{
 
 .dot{
     /* border: 1px solid black; */
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
 
     background-color: grey;
     border-radius: 100%;
@@ -91,4 +91,6 @@ body{
 
 .blackDot{
     background-color: black;
+    height: 15px;
+    width: 15px;
 }
