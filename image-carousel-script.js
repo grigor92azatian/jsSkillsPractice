@@ -19,16 +19,19 @@ function findCurrentIndex(){
     }
 }
 
-
 nextButton.addEventListener("click", function(){
     //show the next picture
     if(currentlyDisplayed === imagesArr.length-1){
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
+            dotsArr[currentlyDisplayed].classList.remove("blackDot");
         currentlyDisplayed = 0;
         imagesArr[currentlyDisplayed].classList.add("visibleImage");
+            dotsArr[currentlyDisplayed].classList.add("blackDot");
     }else{
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
+            dotsArr[currentlyDisplayed].classList.remove("blackDot");
         imagesArr[currentlyDisplayed+1].classList.add("visibleImage");
+            dotsArr[currentlyDisplayed+1].classList.add("blackDot");
         currentlyDisplayed = findCurrentIndex();
     }
     //change the corresponding dot to black
@@ -39,11 +42,15 @@ previousButton.addEventListener("click", function(){
     //show the previous picture
     if(currentlyDisplayed === 0){
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
+            dotsArr[currentlyDisplayed].classList.remove("blackDot");
         currentlyDisplayed = imagesArr.length-1;
         imagesArr[currentlyDisplayed].classList.add("visibleImage");
+            dotsArr[currentlyDisplayed].classList.add("blackDot");
     }else{
         imagesArr[currentlyDisplayed].classList.remove("visibleImage");
+            dotsArr[currentlyDisplayed].classList.remove("blackDot");
         imagesArr[currentlyDisplayed-1].classList.add("visibleImage");
+            dotsArr[currentlyDisplayed-1].classList.add("blackDot");
         currentlyDisplayed = findCurrentIndex();
     }
     //change the corresponding dot to black
