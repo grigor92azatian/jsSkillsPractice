@@ -52,3 +52,31 @@ previousButton.addEventListener("click", function(){
         currentlyDisplayed = findCurrentIndex();
     }
 });
+
+for(let j=0;j<dotsArr.length;j++){      //add a click event to each dot that will change the image to the corresponding one
+
+    dotsArr[j].addEventListener("click", function(){
+        removeFromImageAndDot(currentlyDisplayed);
+        addToImageAndDot(j);
+        currentlyDisplayed = findCurrentIndex();
+    });
+}
+
+
+
+
+// function changeElementClass(elemSelector,elemIndex,className,howToChange){
+//     let updatedElement;
+//     if(elemSelector === "image"){
+//         updatedElement = imagesArr[elemIndex];
+//     }else if(elemSelector === "dot"){
+//         updatedElement = dotsArr[elemIndex];
+//     }
+
+//     if(howToChange === "add"){
+
+//     }
+//     if(howToChange === "remove"){
+
+//     }
+// }
